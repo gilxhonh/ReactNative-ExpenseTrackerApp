@@ -1,11 +1,12 @@
-import {Text} from "react-native";
+import React from 'react'
+import { Text } from 'react-native'
 
-function ManageExpense({route, navigation}) {
-    return (
-        <>
-            <Text></Text>
-        </>
-    );
+function ManageExpense ({ route, navigation }) {
+  return (
+    <>
+      <Text></Text>
+    </>
+  )
 }
 
-export default ManageExpense;
+export default ManageExpense
