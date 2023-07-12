@@ -1,14 +1,19 @@
-import {Button, Text} from "react-native";
-import ExpensesList from "../components/ExpensesOutput/ExpensesList";
-import ExpensesOutput from "../components/ExpensesOutput/ExpensesOutput";
+import React, { useContext } from 'react'
+import ExpensesOutput from '../components/ExpensesOutput/ExpensesOutput'
+import { ExpensesContext } from '../store/expenses-context'
 
-function AllExpenses() {
-    return (
-        <>
-            <ExpensesOutput expensesPeriod="Total"/>
-        </>
-    );
+function AllExpenses () {
+  const expensesCtx = useContext(ExpensesContext)
 
+  return (
+    <>
+      <ExpensesOutput
+        expenses={expensesCtx.expenses}
+        expensesPeriod="Total"
+        fallbackText="No Registerd Expenses Found"
+      />
+    </>
+  )
 }
 
-export default AllExpenses;
+export default AllExpenses
