@@ -7,7 +7,11 @@ function AllExpenses () {
 
   return (
     <>
-      <ExpensesOutput expenses={expensesCtx.expenses} expensesPeriod="Total" />
+      <ExpensesOutput
+        expenses={expensesCtx.expenses}
+        expensesPeriod="Total"
+        fallbackText="No Registerd Expenses Found"
+      />
     </>
   )
 }
